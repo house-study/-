@@ -2,12 +2,11 @@
  * @param {number[]} arr
  */
 function reverseArray(arr) {
-  let resultArray = [];
+  let resultArray = []; 
   for(let i=0; i< arr.length; i++) {
-    if(Array.isArray(arr[i])){
+    if(Array.isArray(arr[i])) {
       resultArray.push(reverseArray(arr[i]));
-    }
-    else{
+    } else {
       resultArray.push(arr[i]);
     }
   }
