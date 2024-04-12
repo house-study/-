@@ -16,7 +16,5 @@ jobs:
           cache: npm
       - name: install
         run: npm install
-
-      - uses: ziishaned/jest-reporter-action@v0.0.1
-        with:
-          github-token: ${{ secrets.ACTION_TOKEN }}
+      - name: test
+        run: npm test
