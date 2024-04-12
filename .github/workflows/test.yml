@@ -16,7 +16,5 @@ jobs:
           cache: npm
       - name: install
         run: npm install
-
-      - uses: mattallty/jest-github-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: test
+        run: npm test
