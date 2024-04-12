@@ -17,7 +17,7 @@ jobs:
       - name: install
         run: npm install
 
-      - uses: raulanatol/jest-coverage-comment-action@main
+      - uses: ziishaned/jest-reporter-action@v0.0.1
         with:
-            github-token: ${{ secrets.ACTION_TOKEN }}
-            jest-command: 'npm test'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          test-command: "npm test"
