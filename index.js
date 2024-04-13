@@ -2,7 +2,9 @@
  * @param {number[]} arr
  */
 function reverseArray(arr) {
-  // 여기에 코드를 작성하세요.
+  const reversed = arr.reverse();
+
+  return reversed;
 }
 
 module.exports = reverseArray;
