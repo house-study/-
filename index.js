@@ -5,9 +5,13 @@ function reverseArray(arr) {
   const reversed = [];
 
   for (let i = 0; i < arr.length; i++){
-    reversed.push(arr[i]);
+    if(Array.isArray(arr[i])){
+      reversed.push(reverseArray(arr[i]));
+    }
+    else{
+      reversed.push(arr[i]);
+    } 
   }
-
   return reversed.reverse();
 }
 
