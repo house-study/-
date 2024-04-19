@@ -2,7 +2,17 @@
  * @param {number[]} arr
  */
 function reverseArray(arr) {
-  // 여기에 코드를 작성하세요.
+  const reversed = [];
+
+  for (let i = 0; i < arr.length; i++){
+    if(Array.isArray(arr[i])){
+      reversed.push(reverseArray(arr[i]));
+    }
+    else{
+      reversed.push(arr[i]);
+    } 
+  }
+  return reversed.reverse();
 }
 
 module.exports = reverseArray;
